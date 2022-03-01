@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Offcanvas navbar template · Bootstrap v5.0</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+          </svg></a>
+        <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">
+                <i class="bi bi-envelope-fill"></i>
+             Почта <span class="badge bg-light text-dark rounded-pill align-text-bottom">360</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-book-half"></i> Структура</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-question-lg"></i> Справка</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-gear-fill"></i> Настройки СЭД</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Выйти <i class="bi bi-door-open-fill"></i></a>
+            </li>
+          </ul>
+          <nav class="nav nav-underline" aria-label="Secondary navigation">
+            <a class="nav-link" href="#"><i class="bi bi-boxes"></i> Портал</a>
+            <a class="nav-link" href="#"><i class="bi bi-briefcase"></i> БРД</a>
+            <a class="nav-link" href="#"><i class="bi bi-journal"></i> Контроль</a>
+            <a class="nav-link" href="#"><i class="bi bi-arrow-left-right"></i> Корреспонденция</a>
+            <a class="nav-link" href="#"><i class="bi bi-list"></i> Протокол</a>
+            <a class="nav-link" href="#"><i class="bi bi-folder-fill"></i> ОРД</a>
+            <a class="nav-link" href="#"><i class="bi bi-person-circle"></i> Обращения</a>
+          </nav>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <div class="d-flex justify-content-between  p-3 my- 3 text-white bg-purple rounded shadow-sm">
+          <button id="cansel" type="button" class="btn btn-outline-light">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1H3.707l10.147 10.146a.5.5 0 0 1-.708.708L3 3.707V8.5a.5.5 0 0 1-1 0v-6z"/>
+            </svg> Отмена
+          </button>
+          <h3 id="textdoc"> Входящий документ</h3>
+          <button id="save" type="button" class="btn btn-outline-light">
+            <i class="bi bi-file-earmark-text"></i> Сохранить
+          </button>
+      </div>
+
+      <div class="my-3 p-3 bg-body rounded shadow">
+      
+        <form class="row gx-3 gy-2 align-items-center">
+
+
+          <div class="container">
+            <div class="row mb-3">
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Снято с контроля
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Для служебного пользования
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label class="form-label">Тема документа:</label>
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-text" id="inputGroup-sizing-lg"><i class="bi bi-pencil-square"></i>
+                    </span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="specificSizeInputName" class="form-label">Входящий №:</label>
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">
+                      <i class="bi bi-box-arrow-in-down"></i>
+                    </span>
+                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="">
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="formDate" class="form-label">Дата:</label>
+                  <input type="date" class="form-control form-control-lg" id="formDate">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="specificSizeInputName" class="form-label">Исходящий №:</label>
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">
+                      <i class="bi bi-box-arrow-up"></i>
+                    </span>
+                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="">
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="formDate" class="form-label">Дата исходящего:</label>
+                  <input type="date" class="form-control form-control-lg" id="formDate">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="specificSizeInputName" class="form-label">Вид доставки:</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">
+                    <i class="bi bi-truck"></i>
+                  </span>
+                  <select class="form-select form-select-lg">
+                    <option selected></option>
+                    <option value="1">Курьер</option>
+                    <option value="2">Факс</option>
+                    <option value="3">Нарочно</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="specificSizeInputName" class="form-label">Корреспондент:</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">
+                    <i class="bi bi-person-square"></i>
+                  </span>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="specificSizeInputName" class="form-label">ФИО корреспондента:</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">
+                    <i class="bi bi-person-square"></i>
+                  </span>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="specificSizeInputName" class="form-label">Тип конртоля:</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">
+                    <i class="bi bi-dpad"></i>
+                  </span>
+                  <select class="form-select form-select-lg">
+                    <option selected></option>
+                    <option value="1">Курьер</option>
+                    <option value="2">Факс</option>
+                    <option value="3">Нарочно</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="specificSizeInputName" class="form-label">Приоритет:</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">
+                    <i class="bi bi-file-lock"></i>
+                  </span>
+                  <select class="form-select form-select-lg">
+                    <option selected></option>
+                    <option value="1">Высокий</option>
+                    <option value="2">Средний</option>
+                    <option value="3">Низкий</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="formDate" class="form-label">Срок исполнения:</label>
+                  <input type="date" class="form-control form-control-lg" id="formDate">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="specificSizeInputName" class="form-label">Количество листов:</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">
+                    <i class="bi bi-files"></i>
+                  </span>
+                  <input type="number" class="form-control" placeholder="Username">
+                </div>
+              </div>
+              <div class="col">
+                <label for="specificSizeInputName" class="form-label">Количество приложений:</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">
+                    <i class="bi bi-files"></i>
+                  </span>
+                  <input type="number" class="form-control" placeholder="Username">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="specificSizeInputName" class="form-label">Характер вопроса:</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">
+                    <i class="bi bi-question-square"></i>
+                  </span>
+                  <select class="form-select form-select-lg">
+                    <option selected></option>
+                    <option value="1">Атомная отрасль</option>
+                    <option value="2">Визиты</option>
+                    <option value="3">Вопросы аудита</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="specificSizeInputName" class="form-label">Ответ на исходящий:</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">
+                    <i class="bi bi-arrow-down-square"></i>
+                  </span>
+                  <select class="form-select form-select-lg">
+                    <option selected></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <label for="specificSizeInputName" class="form-label">Дата ответа:</label>
+                <div class="input-group input-group-lg">
+                  
+                  <input type="date" class="form-control form-control-lg" id="formDate">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="specificSizeInputName" class="form-label">Номенклатурное дело №:</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">
+                    <i class="bi bi-list-ol"></i>
+                  </span>
+                  <select class="form-select form-select-lg">
+                    <option selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col">
+                <label for="specificSizeInputName" class="form-label">Содержание:</label>
+                <textarea id="editor" name="contents">
+                  Ошибка выходит потому что домен не зарегистрирован.
+                </textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="input-group mb-3">
+                  <input type="file" class="form-control" id="inputGroupFile02">
+                  <label class="input-group-text" for="inputGroupFile02"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+    </main>
+
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="offcanvas.js"></script>
+
+    <script src="https://cdn.tiny.cloud/1/p3eoeenwuo61s831obnf76xwsg4rbuu3tb6u09gkkddi4dz0/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+      tinymce.init({
+        selector: '#editor'
+      });
+    </script>
+  </body>
+</html>
